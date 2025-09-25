@@ -37,6 +37,18 @@ document.addEventListener("DOMContentLoaded", () => {
         
         setTimeout(() => {
             refreshButton.classList.remove("animate-play-button");
-        }, 100);
+        }, 300);
+    })
+
+    document.addEventListener("keydown",(e) => {
+        if (e.code === "Space", "Enter") {
+            rollDice();
+            e.preventDefault();
+            refreshButton.classList.add("animate-play-button");
+
+            setTimeout(() => {
+                refreshButton.classList.remove("animate-play-button")
+            }, 300);
+        }
     })
 });
